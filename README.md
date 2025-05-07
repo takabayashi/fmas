@@ -1,53 +1,53 @@
 # StreamAgents
 
-StreamAgents é um framework Java para desenvolvimento de agentes inteligentes em streaming de dados, construído sobre Apache Flink e Apache Kafka.
+StreamAgents is a Java framework for developing intelligent agents in data streaming, built on top of Apache Flink and Apache Kafka.
 
-## 🚀 Características
+## 🚀 Features
 
-- Integração nativa com Apache Flink para processamento de streaming
-- Suporte a comunicação entre agentes (A2A - Agent-to-Agent)
-- Processamento assíncrono de tarefas
-- Integração com Apache Kafka para ingestão de dados
-- Sistema de ferramentas extensível
-- Suporte a serialização Avro
+- Native integration with Apache Flink for stream processing
+- Support for agent-to-agent communication (A2A)
+- Asynchronous task processing
+- Integration with Apache Kafka for data ingestion
+- Extensible tools system
+- Avro serialization support
 
-## 📋 Pré-requisitos
+## 📋 Prerequisites
 
-- Java 17 ou superior
-- Maven 3.6 ou superior
-- Apache Kafka (para exemplos de streaming)
+- Java 17 or higher
+- Maven 3.6 or higher
+- Apache Kafka (for streaming examples)
 - Apache Flink 1.18.1
 
-## 🛠️ Instalação
+## 🛠️ Installation
 
-1. Clone o repositório:
+1. Clone the repository:
 ```bash
-git clone https://github.com/seu-usuario/streamagents.git
+git clone https://github.com/your-username/streamagents.git
 cd streamagents
 ```
 
-2. Compile o projeto:
+2. Build the project:
 ```bash
 mvn clean package
 ```
 
-## 🏗️ Estrutura do Projeto
+## 🏗️ Project Structure
 
 ```
 src/
 ├── main/java/com/streamagents/
-│   ├── core/           # Núcleo do framework
-│   │   ├── agents/     # Implementações de agentes
-│   │   ├── tasks/      # Sistema de tarefas
-│   │   └── tools/      # Ferramentas disponíveis
-│   └── examples/       # Exemplos de uso
-└── test/              # Testes unitários
+│   ├── core/           # Framework core
+│   │   ├── agents/     # Agent implementations
+│   │   ├── tasks/      # Task system
+│   │   └── tools/      # Available tools
+│   └── examples/       # Usage examples
+└── test/              # Unit tests
 ```
 
-## 💻 Uso Básico
+## 💻 Basic Usage
 
 ```java
-// Criando um agente simples
+// Creating a simple agent
 SimpleAgent agent = new SimpleAgent(
     "agent-1",
     "TestAgent",
@@ -55,7 +55,7 @@ SimpleAgent agent = new SimpleAgent(
     "Backstory of the agent"
 );
 
-// Criando uma tarefa
+// Creating a task
 Task task = new SimpleTask(
     "task-1",
     "Process message",
@@ -66,47 +66,47 @@ Task task = new SimpleTask(
     null
 );
 
-// Executando a tarefa
+// Executing the task
 CompletableFuture<TaskOutput> future = agent.executeTask(task, new AgentContext());
 TaskOutput output = future.get();
 ```
 
-## 🔧 Configuração do Kafka
+## 🔧 Kafka Configuration
 
-Para executar os exemplos com Kafka, configure um servidor Kafka local:
+To run the examples with Kafka, set up a local Kafka server:
 
 ```bash
-# Iniciar o Zookeeper
+# Start Zookeeper
 bin/zookeeper-server-start.sh config/zookeeper.properties
 
-# Iniciar o Kafka
+# Start Kafka
 bin/kafka-server-start.sh config/server.properties
 
-# Criar o tópico de teste
+# Create test topic
 bin/kafka-topics.sh --create --topic test-input --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 ```
 
-## 📦 Dependências Principais
+## 📦 Main Dependencies
 
 - Apache Flink 1.18.1
 - Apache Kafka 3.1.0
 - Avro 1.11.1
 - SLF4J 2.0.7
 
-## 🤝 Contribuindo
+## 🤝 Contributing
 
-1. Faça um Fork do projeto
-2. Crie uma Branch para sua Feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a Branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
+1. Fork the project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 📝 Licença
+## 📝 License
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📫 Contato
+## 📫 Contact
 
-Seu Nome - [@seu_twitter](https://twitter.com/seu_twitter) - email@exemplo.com
+Your Name - [@your_twitter](https://twitter.com/your_twitter) - email@example.com
 
-Link do Projeto: [https://github.com/seu-usuario/streamagents](https://github.com/seu-usuario/streamagents) 
+Project Link: [https://github.com/your-username/streamagents](https://github.com/your-username/streamagents) 
