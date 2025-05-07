@@ -1,6 +1,6 @@
-# StreamAgents
+# FMAS (Flink Multi-Agent System)
 
-StreamAgents is a Java framework for developing intelligent agents in data streaming, built on top of Apache Flink and Apache Kafka.
+FMAS is a Java framework for developing intelligent agents in data streaming, built on top of Apache Flink and Apache Kafka.
 
 ## 🚀 Features
 
@@ -22,8 +22,8 @@ StreamAgents is a Java framework for developing intelligent agents in data strea
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/streamagents.git
-cd streamagents
+git clone https://github.com/your-username/fmas.git
+cd fmas
 ```
 
 2. Build the project:
@@ -35,7 +35,7 @@ mvn clean package
 
 ```
 src/
-├── main/java/com/streamagents/
+├── main/java/com/fmas/
 │   ├── core/           # Framework core
 │   │   ├── agents/     # Agent implementations
 │   │   ├── tasks/      # Task system
@@ -109,4 +109,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Your Name - [@your_twitter](https://twitter.com/your_twitter) - email@example.com
 
-Project Link: [https://github.com/your-username/streamagents](https://github.com/your-username/streamagents) 
+Project Link: [https://github.com/your-username/fmas](https://github.com/your-username/fmas) 
